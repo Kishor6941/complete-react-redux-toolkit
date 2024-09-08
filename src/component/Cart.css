@@ -1,0 +1,17 @@
+.cart-nav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.cart-notification{
+    position: relative;
+    left: -20px;
+    font-size: 20px;
+
+}
+.total-cart{
+    position: absolute;
+    top:-5px;
+
+}
