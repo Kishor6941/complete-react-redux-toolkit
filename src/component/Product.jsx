@@ -18,7 +18,7 @@ const Product = () => {
     getProductList();
   }, []);
   return (
-    <div className="row d-flex justify-content-around w-100">
+    <div className="row d-flex justify-content-evenly w-100">
       {ProductList?.map((e) => (
         <div
           key={e?.id}
