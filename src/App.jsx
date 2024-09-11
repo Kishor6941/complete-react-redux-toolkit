@@ -26,12 +26,12 @@ const App = () => {
       <div>
         <button onClick={()=>dispatch({type : 'DECREMENT'})}>Decrement</button>
       </div> */}
-      <button onClick={() => dispatch(fetchUserList())}>Fetch User List</button>
+      {/* <button onClick={() => dispatch(fetchUserList())}>Fetch User List</button>
       <ul>
       { state?.userList?.data?.data?.length && 
         state?.userList?.data.data.map((ele) => <li key={ele?.id}>{ele?.name}</li>)
       }
-      </ul>
+      </ul> */}
       <Navbar />
       <Routes>
         <Route element={<PrivateRoutes />}>
