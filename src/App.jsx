@@ -9,6 +9,7 @@ import ViewCart from './component/viewCart/ViewCart'
 import MainComp from './component/MainComp'
 import Todo from './component/Todo/Todo'
 import { fetchUserList } from './redux-toolkit/slice/UserListSlice'
+import PrivateRoutes from './utils/PrivateRoutes'
 const App = () => {
  const dispatch =  useDispatch()
  let state = useSelector(state => state)
@@ -33,9 +34,11 @@ const App = () => {
       </ul>
       <Navbar />
       <Routes>
-        <Route path="/" element={<MainComp />} />
+        <Route element={<PrivateRoutes />}>
+        <Route path="/" element={<MainComp />}  />
+        <Route path="/view-cart" element={<ViewCart />}  />
+        </Route>
         <Route path="/todo" element={<Todo />} />
-        <Route path="/view-cart" element={<ViewCart />} />
       </Routes>
     </div>
   )
