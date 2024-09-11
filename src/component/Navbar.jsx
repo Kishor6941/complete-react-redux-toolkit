@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./Cart.css";
 import { Link } from "react-router-dom";
-const Cart = () => {
+const Navbar = () => {
   let product = useSelector((state) => state.product);
 
   const totalPrice = product.reduce((a, b) => {
@@ -15,9 +15,17 @@ const Cart = () => {
         <span>
           <h1>Total Price $ {totalPrice}</h1>
         </span>
+
+        <Link to="/todo">
+          <span>
+            <h1>Todo App</h1>
+          </span>
+        </Link>
+
         <span className="cart-notification">
           <Link to="/view-cart">
-              <span>cart</span><span className="total-cart">{product?.length}</span>
+            <span>cart</span>
+            <span className="total-cart">{product?.length}</span>
           </Link>
         </span>
       </nav>
@@ -25,4 +33,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Navbar;

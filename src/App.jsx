@@ -2,11 +2,12 @@ import React from 'react'
 import Counter from './component/Counter'
 
 import { useDispatch } from 'react-redux'
-import Cart from './component/cart'
+import Navbar from './component/Navbar'
 import Product from './component/Product'
 import { Routes,Route } from 'react-router-dom'
 import ViewCart from './component/viewCart/ViewCart'
 import MainComp from './component/MainComp'
+import Todo from './component/Todo/Todo'
 const App = () => {
  const dispatch =  useDispatch()
   return (
@@ -18,9 +19,10 @@ const App = () => {
       <div>
         <button onClick={()=>dispatch({type : 'DECREMENT'})}>Decrement</button>
       </div> */}
-      <Cart />
+      <Navbar />
       <Routes>
         <Route path="/" element={<MainComp />} />
+        <Route path="/todo" element={<Todo />} />
         <Route path="/view-cart" element={<ViewCart />} />
       </Routes>
     </div>
