@@ -7,6 +7,19 @@ import { Provider } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
  import { store } from './redux-toolkit/store.js'
 import { BrowserRouter } from 'react-router-dom'
+import axios from 'axios'
+
+axios.interceptors.request.use((request) => {
+  let req = {
+    ...request,
+    headers : {
+      token : "kfhdskfdkfd"
+    } 
+  }
+  return req
+  
+})
+
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
